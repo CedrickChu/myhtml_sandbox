@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Form</title>
+    <link href="/static/breadcrumb.css" rel="stylesheet">
+    <link href="/static/signup_form.css" rel="stylesheet">
+</head>
+<body>
+    <ul class="breadcrumb">
+        <li><a href="/home.html">Home</a></li>
+        <li>Sign-Up Form</li>
+        <li><a href="/employee_reg.html">Employee Registration</a></li>
+        <li><a href="/product_table.html">Product Table</a></li>
+        <li><a href="/event_table.html">Event Table</a></li>
+    </ul>
+    <div class="container">
+        <h1>Sign Up</h1>
+        <form id="registration-form" action="#" method="post">
+            <div class="form-group">
+                <label for="lastname">Last Name:</label>
+                <input type="text" id="lastname" name="lastname">
+            </div>
+            <div class="form-group">
+                <label for="firstname">First Name:</label>
+                <input type="text" id="firstname" name="firstname">
+            </div>
+            <div class="form-group">
+                <label for="middlename">Middle Name:</label>
+                <input type="text" id="middlename" name="middlename">
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[!@#$%^&*]).{8,}$">
+                <small>Password must contain at least 8 characters, including one uppercase letter, one lowercase letter, one number, and one special character (!@#$%^&*).</small>
+            </div>
+            <div class="form-group">
+                <label for="confirmPassword">Confirm Password:</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" required>
+                <p id="passwordMatchError" style="color: red;"></p>
+            </div>
+            <button type="submit">Sign Up</button>
+        </form>
+
+        <script>
+            document.getElementById("registration-form").addEventListener("submit", function (event) {
+                event.preventDefault();
+                var password = document.getElementById("password").value;
+                var confirmPassword = document.getElementById("confirmPassword").value;
+
+                if (password !== confirmPassword) {
+                    document.getElementById("passwordMatchError").textContent = "Passwords do not match!";
+                } else {
+<<<<<<< HEAD
+                    document.getElementById("passwordMatchError").textContent = "";
+=======
+                    document.getElementById("passwordMatchError").textContent = "Registration Completed";
+>>>>>>> 18bc80c28c5397e10ec643c2194b70e520e6c391
+                    this.submit();
+                }
+            });
+        </script>
+    </div>
+</body>
+</html>

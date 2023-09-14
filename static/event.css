@@ -1,0 +1,75 @@
+
+table {
+    width: 60%;
+    border-collapse: separate;
+    margin: auto;
+    border-spacing: 20px;
+}
+
+th, td, h1 {
+    border: 1px solid #ccc;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
+}
+
+th {
+    background-color: black !important;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    font-size: 20px;
+    color: white !important;
+}
+
+#logo {
+    background-color: white;
+    border: none;
+}
+
+    #logo img {
+        height: 200px;
+        width: 200px;
+    }
+
+#heading {
+    font-size: 40px;
+    font-weight: bold;
+    font-family: 'Footlight MT';
+    background-color: #274472;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    float: right;
+    color: white;
+    margin-top: 3em;
+}
+
+td {
+    vertical-align: middle;
+}
+
+    td[rowspan="4"] {
+        font-weight: bolder;
+    }
+
+.eventName {
+    background-color: aquamarine !important;
+}
+
+.dateColor {
+    background-color: #C3E0E5 !important;
+}
+
+.locColor {
+    background-color: #2CEEF0 !important;
+}
+
+.actColor {
+    background-color: #0476D0 !important;
+    text-align: left;
+}
+
+

@@ -1,0 +1,11 @@
+
+.table {
+    width: 50%;
+    border-collapse: collapse;
+    margin: auto;
+}
+
+th, td, h1 {
+    text-align: center;
+    border: 2px solid white;
+}
