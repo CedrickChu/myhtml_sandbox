@@ -1,4 +1,6 @@
-
+body {
+    font-family: Arial, sans-serif;
+}
 .table {
     width: 50%;
     border-collapse: collapse;
@@ -7,6 +9,5 @@
 
 th, td, h1 {
     text-align: center;
-    border: 2px solid white;
-    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
