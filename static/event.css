@@ -24,10 +24,11 @@ th {
     font-size: 20px;
     color: white !important;
 }
+
 .container {
     position: relative;
-    bottom: 0;
 }
+
 .row{
     column-gap: 120px;
 }
@@ -91,5 +92,3 @@ td {
     background-color: #219efd !important;
     text-align: left;
 }
-
-

@@ -1,3 +1,6 @@
+.content{
+    margin-top: 10em;
+}
 ul.breadcrumb {
     padding: 10px 16px;
     list-style: none;
@@ -10,7 +13,6 @@ ul.breadcrumb {
 ul.breadcrumb li {
 display: inline;
 font-size: 20px;
-
 
 
 }
@@ -33,10 +35,6 @@ ul.breadcrumb li a:hover {
 .navbar-brand img{
     height: 100px;
     width: 100px;
-
-}
-nav{
-    margin-bottom: 40px;
 
 }
 

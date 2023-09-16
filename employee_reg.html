@@ -10,7 +10,7 @@
     <link href="static/employee_reg.css" rel="stylesheet">
 </head>
 <body>
-        <nav class="navbar bg-dark">
+        <nav class="navbar bg-dark fixed-top">
             <div class="container-fluid">
                 <a class="navbar-brand" href="https://github.com/CedrickChu">
                     <img src="static/images/c.png" alt="Bootstrap" width="30" height="24">
@@ -24,63 +24,63 @@
                 </ul>
             </div>
         </nav>
+    <main class="content">
+        <div class="container">
+            <h1>Employee Registration</h1>
+            <form action="#" method="post" id="registration-form">
+                <div class="form-group">
+                    <label for="last_name">Last Name:</label>
+                    <input type="text" id="last_name" required>
+                </div>
+                <div class="form-group">
+                    <label for="first_name">First Name:</label>
+                    <input type="text" id="first_name" required>
+                </div>
+                <div class="form-group">
+                    <label for="middle_name">Middle Name:</label>
+                    <input type="text" id="middle_name">
+                </div>
+                <div class="form-group">
+                    <label for="birthdate">Birthdate:</label>
+                    <input type="date" id="birthdate" required>
+                </div>
+                <div class="form-group">
+                    <label for="department">Department:</label>
+                    <select id="department" required>
+                        <option value="hr">HR</option>
+                        <option value="finance">Finance</option>
+                        <option value="it">IT</option>
+                        <option value="sales">Sales</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="office">Office:</label>
+                    <input type="text" id="office" required>
+                </div>
+                <input type="button" value="Submit" onclick="log()">
+            </form>
 
-    <div class="container">
-        <h1>Employee Registration</h1>
-        <form action="#" method="post" id="registration-form">
-            <div class="form-group">
-                <label for="last_name">Last Name:</label>
-                <input type="text" id="last_name" required>
-            </div>
-            <div class="form-group">
-                <label for="first_name">First Name:</label>
-                <input type="text" id="first_name" required>
-            </div>
-            <div class="form-group">
-                <label for="middle_name">Middle Name:</label>
-                <input type="text" id="middle_name">
-            </div>
-            <div class="form-group">
-                <label for="birthdate">Birthdate:</label>
-                <input type="date" id="birthdate" required>
-            </div>
-            <div class="form-group">
-                <label for="department">Department:</label>
-                <select id="department" required>
-                    <option value="hr">HR</option>
-                    <option value="finance">Finance</option>
-                    <option value="it">IT</option>
-                    <option value="sales">Sales</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="office">Office:</label>
-                <input type="text" id="office" required>
-            </div>
-            <input type="button" value="Submit" onclick="log()">
-        </form>
+            <script>
+                
+                function log() {
 
-        <script>
-            
-            function log() {
+                    var last_name = document.getElementById("last_name").value;
+                    var first_name = document.getElementById("first_name").value;
+                    var middle_name = document.getElementById("middle_name").value;
+                    var birth_date = document.getElementById("birthdate").value;
+                    var department = document.getElementById("department").value;
+                    var office = document.getElementById("office").value;
 
-                var last_name = document.getElementById("last_name").value;
-                var first_name = document.getElementById("first_name").value;
-                var middle_name = document.getElementById("middle_name").value;
-                var birth_date = document.getElementById("birthdate").value;
-                var department = document.getElementById("department").value;
-                var office = document.getElementById("office").value;
+                    console.log("Last Name: " + last_name);
+                    console.log("First Name: " + first_name);
+                    console.log("Middle Name: " + middle_name);
+                    console.log("Birth Date: " + birth_date);
+                    console.log("Department: " + department);
+                    console.log("Office: " + office);
 
-                console.log("Last Name: " + last_name);
-                console.log("First Name: " + first_name);
-                console.log("Middle Name: " + middle_name);
-                console.log("Birth Date: " + birth_date);
-                console.log("Department: " + department);
-                console.log("Office: " + office);
-
-            }
-        </script>
-  
-    </div>
+                }
+            </script>
+        </div>
+    </main>
 </body>
 </html>
