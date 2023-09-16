@@ -29,9 +29,6 @@ th {
     position: relative;
 }
 
-.row{
-    column-gap: 120px;
-}
 #logo, #logo2 {
     position: relative;
     width: 200px;
@@ -63,9 +60,13 @@ th {
     border-top-right-radius: 40px;
     border-bottom-left-radius: 40px;
     border-bottom-right-radius: 40px;
-    float: right;
+    display: flex;
     color: white;
     margin-top: 3em;
+    text-align: center;
+    justify-content: center;
+    padding-top: 10px;
+    
 }
 
 td {
