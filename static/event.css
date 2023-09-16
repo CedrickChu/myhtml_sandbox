@@ -1,6 +1,18 @@
 body {
     font-family: Arial, sans-serif;
 }
+#background {
+    background-image: url("static/images/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 99999;
+}
 table {
     max-width: 1400px;
     border-collapse: separate;

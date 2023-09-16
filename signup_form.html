@@ -27,60 +27,62 @@
     </nav>
 
     <main class="content">
-        <div class="container">
-            <h1>Sign Up</h1>
-            <form id="registration-form" action="#" method="post">
-                <div class="form-group">
-                    <label for="lastname">Last Name:</label>
-                    <input type="text" id="lastname" name="lastname">
-                </div>
-                <div class="form-group">
-                    <label for="firstname">First Name:</label>
-                    <input type="text" id="firstname" name="firstname">
-                </div>
-                <div class="form-group">
-                    <label for="middlename">Middle Name:</label>
-                    <input type="text" id="middlename" name="middlename">
-                </div>
-                <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email">
-                </div>
-                <div class="form-group">
-                    <label for="password">Password:</label>
-                    <input type="password" id="password" name="password" pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[!@#$%^&*]).{8,}$">
-                    <small>Password must contain at least 8 characters, including one uppercase letter, one lowercase letter, one number, and one special character (!@#$%^&*).</small>
-                </div>
-                <div class="form-group">
-                    <label for="confirmPassword">Confirm Password:</label>
-                    <input type="password" id="confirmPassword" name="confirmPassword" required>
-                    <p id="passwordMatchError" style="color: red;"></p>
-                </div>
-                <button type="submit">Sign Up</button>
-            </form>
+        <div id="background" class="bg-image shadow-2-strong">
+            <div class="container">
+                <h1>Sign Up</h1>
+                <form id="registration-form" action="#" method="post">
+                    <div class="form-group">
+                        <label for="lastname">Last Name:</label>
+                        <input type="text" id="lastname" name="lastname">
+                    </div>
+                    <div class="form-group">
+                        <label for="firstname">First Name:</label>
+                        <input type="text" id="firstname" name="firstname">
+                    </div>
+                    <div class="form-group">
+                        <label for="middlename">Middle Name:</label>
+                        <input type="text" id="middlename" name="middlename">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password" pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[!@#$%^&*]).{8,}$">
+                        <small>Password must contain at least 8 characters, including one uppercase letter, one lowercase letter, one number, and one special character (!@#$%^&*).</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="confirmPassword">Confirm Password:</label>
+                        <input type="password" id="confirmPassword" name="confirmPassword" required>
+                        <p id="passwordMatchError" style="color: red;"></p>
+                    </div>
+                    <button type="submit">Sign Up</button>
+                </form>
 
-            <script>
-                document.getElementById("registration-form").addEventListener("submit", function (event) {
-                    event.preventDefault();
-                    var password = document.getElementById("password").value;
-                    var lastname = document.getElementById("lastname").value;
-                    var confirmPassword = document.getElementById("confirmPassword").value;
-                    
-
-                    if (password !== confirmPassword) {
-                        document.getElementById("passwordMatchError").textContent = "Passwords do not match!";
-                    } else {
-
-                        document.getElementById("passwordMatchError").textContent = "";
-
-                        document.getElementById("passwordMatchError").textContent = "";
-
-                        this.submit();
+                <script>
+                    document.getElementById("registration-form").addEventListener("submit", function (event) {
+                        event.preventDefault();
+                        var password = document.getElementById("password").value;
+                        var lastname = document.getElementById("lastname").value;
+                        var confirmPassword = document.getElementById("confirmPassword").value;
                         
-                        alert(`Welcome ${lastname}!`);
-                    }
-                });
-            </script>
+
+                        if (password !== confirmPassword) {
+                            document.getElementById("passwordMatchError").textContent = "Passwords do not match!";
+                        } else {
+
+                            document.getElementById("passwordMatchError").textContent = "";
+
+                            document.getElementById("passwordMatchError").textContent = "";
+
+                            this.submit();
+                            
+                            alert(`Welcome ${lastname}!`);
+                        }
+                    });
+                </script>
+            </div>
         </div>
     </main>
 </body>
