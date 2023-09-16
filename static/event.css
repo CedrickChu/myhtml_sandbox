@@ -22,16 +22,34 @@ th {
     font-size: 20px;
     color: white !important;
 }
-
-#logo {
-    background-color: white;
-    border: none;
+.container {
+    position: relative;
+    bottom: 0;
+}
+.row{
+    column-gap: 120px;
+}
+#logo, #logo2 {
+    position: relative;
+    width: 200px;
+    height: 200px;
 }
 
-    #logo img {
-        height: 200px;
-        width: 200px;
-    }
+#logo img {
+    position: absolute; 
+    bottom: 0;
+    margin-bottom: -1.4em;
+    height: 200px;
+    width: 200px;
+}
+
+#logo2 img {
+    position: absolute; 
+    bottom: 0;
+    height: 150px;
+    width: 150px;
+}
+
 
 #heading {
     font-size: 40px;
