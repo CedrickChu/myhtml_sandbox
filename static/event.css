@@ -1,6 +1,6 @@
 
 table {
-    width: 60%;
+    max-width: 1400px;
     border-collapse: separate;
     margin: auto;
     border-spacing: 20px;
@@ -86,7 +86,7 @@ td {
 }
 
 .actColor {
-    background-color: #0476D0 !important;
+    background-color: #219efd !important;
     text-align: left;
 }
 
