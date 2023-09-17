@@ -31,19 +31,19 @@
             <form action="#" method="post" id="registration-form">
                 <div class="form-group">
                     <label for="last_name">Last Name:</label>
-                    <input type="text" id="last_name" required>
+                    <input type="text" id="last_name" name="last_name" required>
                 </div>
                 <div class="form-group">
                     <label for="first_name">First Name:</label>
-                    <input type="text" id="first_name" required>
+                    <input type="text" id="first_name" name="first_name" required>
                 </div>
                 <div class="form-group">
                     <label for="middle_name">Middle Name:</label>
-                    <input type="text" id="middle_name">
+                    <input type="text" id="middle_name" name="middle_name">
                 </div>
                 <div class="form-group">
                     <label for="birthdate">Birthdate:</label>
-                    <input type="date" id="birthdate" required>
+                    <input type="date" id="birthdate" name="birthdate" required>
                 </div>
                 <div class="form-group">
                     <label for="department">Department:</label>
@@ -56,31 +56,26 @@
                 </div>
                 <div class="form-group">
                     <label for="office">Office:</label>
-                    <input type="text" id="office" required>
+                    <input type="text" id="office" name="office" required>
                 </div>
-                <input type="button" value="Submit" onclick="log()">
+                <button type="submit">Submit</button>
             </form>
 
             <script>
-                
-                function log() {
-
-                    var last_name = document.getElementById("last_name").value;
-                    var first_name = document.getElementById("first_name").value;
-                    var middle_name = document.getElementById("middle_name").value;
-                    var birth_date = document.getElementById("birthdate").value;
-                    var department = document.getElementById("department").value;
-                    var office = document.getElementById("office").value;
-
-                    console.log("Last Name: " + last_name);
-                    console.log("First Name: " + first_name);
-                    console.log("Middle Name: " + middle_name);
-                    console.log("Birth Date: " + birth_date);
-                    console.log("Department: " + department);
-                    console.log("Office: " + office);
-
-                }
+                document.getElementById("registration-form").addEventListener("submit", function(event) {
+                    event.preventDefault();
+                    var form = event.target;
+                    var formData = new FormData(form);
+                    var message = "";
+            
+                    for (var pair of formData.entries()) {
+                        console.log(pair[0] + ": " + pair[1]);
+                        message += pair[0] + ": " + pair[1] + "\n"; 
+                    }
+                    alert(message + "press ctrl shift j to open console log");
+                });
             </script>
+            
         </div>
     </main>
 </body>

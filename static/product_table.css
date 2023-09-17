@@ -7,9 +7,8 @@ body {
     margin: auto;
 }
 
-th, td, h1 {
+th, h1, td{
     text-align: center;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     vertical-align: middle;
 }
-
