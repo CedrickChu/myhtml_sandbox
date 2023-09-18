@@ -1,0 +1,107 @@
+body {
+    font-family: Arial, sans-serif;
+}
+#background {
+    background-image: url("static/images/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 99999;
+}
+table {
+    max-width: 1400px;
+    border-collapse: separate;
+    margin: auto;
+    border-spacing: 20px;
+}
+
+th, td, h1 {
+    border: 1px solid #ccc;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
+}
+
+th {
+    background-color: black !important;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    font-size: 20px;
+    color: white !important;
+}
+
+.container {
+    position: relative;
+}
+
+#logo, #logo2 {
+    position: relative;
+    width: 200px;
+    height: 200px;
+}
+
+#logo img {
+    position: absolute; 
+    bottom: 0;
+    margin-bottom: -1.4em;
+    height: 200px;
+    width: 200px;
+}
+
+#logo2 img {
+    position: absolute; 
+    bottom: 0;
+    height: 150px;
+    width: 150px;
+}
+
+
+#heading {
+    font-size: 40px;
+    font-weight: bold;
+    font-family: 'Footlight MT';
+    background-color: #274472;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    display: flex;
+    color: white;
+    margin-top: 3em;
+    text-align: center;
+    justify-content: center;
+    padding-top: 10px;
+    
+}
+
+td {
+    vertical-align: middle;
+}
+
+    td[rowspan="4"] {
+        font-weight: bolder;
+    }
+
+.eventName {
+    background-color: aquamarine !important;
+}
+
+.dateColor {
+    background-color: #C3E0E5 !important;
+}
+
+.locColor {
+    background-color: #2CEEF0 !important;
+}
+
+.actColor {
+    background-color: #219efd !important;
+    text-align: left;
+}

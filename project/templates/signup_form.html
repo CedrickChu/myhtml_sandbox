@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link href="/static/navbar.css" rel="stylesheet">
+    <link href="/static/signup_form.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/static/images/chu.png">
+
+</head>
+<body>
+    <nav class="navbar bg-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="https://github.com/CedrickChu">
+            <img src="/static/images/chu.png" alt="Bootstrap" width="30" height="24">
+            </a>
+                <ul class="breadcrumb">
+                <li><a href="{{ url_for('home') }}" >Home</a></li>
+                <li>Sign-Up Form</li>
+                <li><a href="{{ url_for('employee') }}" >Employee Registration</a></li>
+                <li><a href="{{ url_for('productTable') }}" >Product Table</a></li>
+                <li><a href="{{ url_for('eventTable') }}" >Event Table</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="content">
+        <div id="background" class="bg-image shadow-2-strong">
+            <div class="container">
+                <h1>Sign Up</h1>
+                <form id="registration-form" action="#" method="post">
+                    <div class="form-group">
+                        <label for="lastname">Last Name:</label>
+                        <input type="text" id="lastname" name="lastname">
+                    </div>
+                    <div class="form-group">
+                        <label for="firstname">First Name:</label>
+                        <input type="text" id="firstname" name="firstname">
+                    </div>
+                    <div class="form-group">
+                        <label for="middlename">Middle Name:</label>
+                        <input type="text" id="middlename" name="middlename">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password" pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[!@#$%^&*]).{8,}$">
+                        <small>Password must contain at least 8 characters, including one uppercase letter, one lowercase letter, one number, and one special character (!@#$%^&*).</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="confirmPassword">Confirm Password:</label>
+                        <input type="password" id="confirmPassword" name="confirmPassword" required>
+                        <p id="passwordMatchError" style="color: red;"></p>
+                    </div>
+                    <button type="submit">Sign Up</button>
+                </form>
+
+                <script>
+                    document.getElementById("registration-form").addEventListener("submit", function (event) {
+                        event.preventDefault();
+                        var password = document.getElementById("password").value;
+                        var lastname = document.getElementById("lastname").value;
+                        var confirmPassword = document.getElementById("confirmPassword").value;
+                        
+
+                        if (password !== confirmPassword) {
+                            document.getElementById("passwordMatchError").textContent = "Passwords do not match!";
+                        } else {
+
+                            document.getElementById("passwordMatchError").textContent = "";
+
+                            document.getElementById("passwordMatchError").textContent = "";
+
+                            this.submit();
+                            
+                            alert(`Welcome ${lastname}!`);
+                        }
+                    });
+                </script>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,
+initial-scale=1.0">
+    <title>HTML Table with Merged Cells</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    
+    <link href="static/event.css" rel="stylesheet">
+    <link href="static/navbar.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="static/images/chu.png">
+
+</head>
+<body>
+    <nav class="navbar bg-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="https://github.com/CedrickChu">
+            <img src="static/images/chu.png" alt="Bootstrap" width="30" height="24">
+            </a>
+                <ul class="breadcrumb">
+                    <li><a href="{{ url_for('home') }}">Home</a></li>
+                    <li><a href="{{ url_for('signup') }}">Sign-Up Form</a></li>
+                    <li><a href="{{ url_for('employee') }}">Employee Registration</a></li>
+                    <li><a href="{{ url_for('productTable') }}">Product Table</a></li>
+                    <li>Event Table</li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="content">
+        <div class="row justify-content-md-center">
+            <div id="logo" class="col-md-auto">
+                <img src="static/images/event.png" alt="event logo">
+            </div>
+            <div id="heading" class="col-4 text-center">
+                Palawan State University
+            </div>
+            <div id="logo2" class="col-md-auto">
+                <img src="static/images/psu.png" alt="PSU logo">
+            </div>
+        </div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Event Name</th>
+                    <th>Date</th>
+                    <th>Location</th>
+                    <th>Activities</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="table-primary" rowspan="4">Graduation Ceremony</td>
+                    <td class="dateColor" rowspan="4">June 8, 2024</td>
+                    <td class="locColor" rowspan="4">School Football Stadium</td>
+                    <td class="actColor">Valedictorian and Salutatorian Speeches: Inspiring speeches by the top students.</td>
+                </tr>
+                <tr>
+                    <td class="actColor">Diploma Presentation: Graduates receive their diplomas on stage.</td>
+                </tr>
+                <tr>
+                    <td class="actColor">Cap and Gown Photos: Photo opportunities for graduates and their families.</td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td class="table-primary" rowspan="4">Art Exhibition</td>
+                    <td class="dateColor" rowspan="4">November 5, 2024</td>
+                    <td class="locColor" rowspan="4">School Library Building</td>
+                    <td class="actColor">Art Auctions: Organize art auctions for select pieces in the exhibition, with proceeds benefiting a charitable cause or the artists themselves.</td>
+                </tr>
+                <tr>
+                    <td class="actColor">Live Art Demonstrations: Set up live art demonstrations where artists create artwork in real-time. Visitors can watch and interact with the artists while they work.</td>
+                </tr>
+                <tr>
+                    <td class="actColor">Artists' Q&A Panel: Arranged panel discussion or Q&A session with participating artists, allowing visitors to ask questions and engage in discussions about art and creativity.</td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td class="table-primary" rowspan="4">Intramurals</td>
+                    <td class="dateColor" rowspan="4">October 15-18, 2024</td>
+                    <td class="locColor" rowspan="4">PSU Football Field</td>
+                    <td class="actColor">Opening Ceremony and Parade</td>
+                </tr>
+                <tr>
+                    <td class="actColor">Sports Competitions: Students participate in various sports and compete for the Intramurals championship.</td>
+                </tr>
+                <tr>
+                    <td class="actColor">Closing Ceremony and Awarding</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+</body>
+</html>
